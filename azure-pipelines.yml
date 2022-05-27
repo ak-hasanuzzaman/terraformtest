@@ -26,5 +26,3 @@ stages:
         repository: 'ahasanuzzaman/weatherapi:jhooq-docker-demo'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
-        tags: |
-          $(tag)
