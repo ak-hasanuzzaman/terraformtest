@@ -40,11 +40,11 @@ resource "azurerm_container_group" "tfcg_test" {
   dns_name_label      = "binarythistlewa01"
   os_type             = "Linux"
 
-  # image_registry_credential {
-  #   username = "ahasanuzzaman"
-  #   password = "OhP@ss321"
-  #   server   = "hub.docker.com"
-  # }
+  image_registry_credential {
+    username = "ahasanuzzaman"
+    password = "OhP@ss321"
+    server   = "hub.docker.com"
+  }
 
   container {
       name            = "weatherapi"
