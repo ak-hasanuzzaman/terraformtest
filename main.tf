@@ -15,6 +15,10 @@ terraform {
         key                  = "terraform.tfstate"
     }
 }
+variable "imagebuild" {
+  type        = string
+  description = "Latest Image Build"
+}
 
 # provider "azurerm" {
 #   subscription_id = "377e7ff2-5e8e-4a7c-8206-21f2def57cb2"
@@ -48,7 +52,7 @@ resource "azurerm_container_group" "tfcg_test" {
 
   container {
       name            = "weatherapi"
-      image           = "ahasanuzzaman/weatherapi:lastest"
+      image           = "ahasanuzzaman/weatherapi:${var.imagebuild}"
         cpu             = "1"
         memory          = "1"
 
