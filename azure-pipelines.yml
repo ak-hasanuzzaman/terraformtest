@@ -23,6 +23,8 @@ stages:
      - task: Docker@2
        inputs:
         containerRegistry: 'testterraformdockerhub'
-        repository: 'ahasanuzzaman/weatherapi:jhooq-docker-demo'
+        repository: 'ahasanuzzaman/weatherapi'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
+        tags: 
+          $(tag)
